@@ -1,0 +1,24 @@
+#include <bits/stdc++.h>
+using namespace std;
+#define ll long long int
+int main() {
+	// your code goes here
+	int t;
+	cin>>t;
+	while(t--){
+	    ll x=0;
+	    int a,b,c;
+	    cin>>a>>b>>c;
+	    ll d=c/b;
+	    ll ans=0;
+	    if(a>d){
+	        if(c-(d*b)>0) x = c - (d*b);
+	        ans = d*pow(b,2)+pow(x,2);
+	    }
+	    else{
+	        ans = a*pow(b,2);
+	    }
+	    cout<<ans<<endl;
+	}
+	return 0;
+}
